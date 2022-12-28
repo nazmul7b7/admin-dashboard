@@ -12,7 +12,9 @@
   --nav-color-1: #c9c9c9;
   --nav-color-2: #62daff;
   --blue-1: #98ffe2;
-  --gh-avatar: url('https://github.com/nazmul7b7.png') --gh-avatar2: url('https://github.com/james.png') --content-gray: rgb(235, 235, 235);
+  --gh-avatar: url('https://github.com/nazmul7b7.png');
+  --gh-avatar2: url('https://github.com/james.png');
+  --content-gray: rgb(235, 235, 235);
   --transition-notDrawer: margin-left 0.3s ease-in;
   --transition-drawer: width 0.3s ease-in;
 }
@@ -97,12 +99,109 @@ body {
   padding-top: 10px;
 }
 
+/* NavBar Styling */
 .navbar {
   grid-area: nav;
   transition: var(--transition-notDrawer);
+  background-color: var(--nav-bg-1);
+  padding: 1.5rem 3rem;
+  border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+.topNav {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  margin-bottom: 2.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  width: 100%;
+}
+
+.search>input {
+  display: inline-block;
+  border: 0;
+  background-color: var(--nav-color-1);
+  padding: 0.5rem 1.5rem;
+  outline-color: var(--blue-1);
+  margin-left: 1.25rem;
+  border-radius: 15px;
+  width: min(80%, 600px);
+  margin-right: 20px;
+}
+
+.navbar .account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.gh-avatar {
+  background: var(--gh-avatar) center center / cover no-repeat;
+  border-radius: 50%;
+}
+
+.account .gh-avatar {
+  margin: 0 1rem 0 2.5rem;
+  height: 40px;
+  width: 40px;
+}
+
+.botNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile .gh-avatar {
+  width: 75px;
+  height: 75px;
+}
+
+.greeting {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  background-color: var(--drawer-color);
+  color: var(--text-secondary);
+  font-weight: 700rem;
+  padding: 0.5rem 1.8rem;
+  border-radius: 8px;
+  font-size: 20px;
+  border: 1px solid gray;
+  cursor: pointer;
 }
 
 .content {
   grid-area: content;
   transition: var(--transition-notDrawer);
+}
+
+img {
+  cursor: pointer;
 }
